@@ -1,0 +1,49 @@
+[System]
+Name='pi1'
+Type='mamdani'
+Version=2.0
+NumInputs=1
+NumOutputs=2
+NumRules=7
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='error'
+Range=[-600 600]
+NumMFs=7
+MF1='LS':'trimf',[-520 -468 -52]
+MF2='SWs':'trimf',[0 52 260]
+MF3='SWl':'trimf',[260 416 520]
+MF4='MS':'trimf',[-468 -260 -52]
+MF5='N':'trimf',[-52 0 52]
+MF6='SWm':'trimf',[52 260 416]
+MF7='SS':'trimf',[-260 -52 0]
+
+[Output1]
+Name='kp'
+Range=[0 2.5]
+NumMFs=3
+MF1='L':'trimf',[0.7 1 1.25]
+MF2='M':'trimf',[1.25 1.5 1.75]
+MF3='H':'trimf',[1.75 2 2.25]
+
+[Output2]
+Name='ki'
+Range=[10 50]
+NumMFs=3
+MF1='L':'trimf',[15 20 25]
+MF2='M':'trimf',[25 30 35]
+MF3='H':'trimf',[35 40 45]
+
+[Rules]
+1, 3 3 (1) : 1
+4, 3 2 (1) : 1
+7, 2 2 (1) : 1
+5, 2 2 (1) : 1
+2, 2 1 (1) : 1
+6, 1 1 (1) : 1
+3, 1 1 (1) : 1
