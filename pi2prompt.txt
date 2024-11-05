@@ -1,0 +1,1 @@
+kp value is 1.5 ki is 30, pi 1 max is 780 and min is 520.9 other signal max is 930.1 and min is -517.4 and the error of both signal max is 869.1 and min is 1063 
